@@ -28,7 +28,7 @@ namespace Tell_Me_Frequencies
                         {
                             counter++;
                         }
-                    }
+                    } 
                     frase = frase.Replace(letter,(char) 0);
                     Frequency freq = new Frequency(letter, counter);
                     lista.Add(freq);
