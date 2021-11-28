@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Text;
 
 namespace Tell_Me_Frequencies
 {
@@ -28,18 +28,15 @@ namespace Tell_Me_Frequencies
                         {
                             counter++;
                         }
-                    } 
-                    frase = frase.Replace(letter,(char) 0);
+                    }
+                    frase = frase.Replace(letter.ToString(), "");
                     Frequency freq = new Frequency(letter, counter);
                     lista.Add(freq);
                 }
                 lista.Sort();
                 foreach (Frequency frequency in lista)
                 {
-                    if(frequency.Code != 0)
-                    {
-                        Console.WriteLine(frequency.Code + " "+ frequency.Quantity);
-                    }
+                    Console.WriteLine(frequency.Code + " "+ frequency.Quantity);
                 }
                 first = false;
                 lista.Clear();
